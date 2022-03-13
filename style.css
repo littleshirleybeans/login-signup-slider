@@ -1,0 +1,146 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  color: wheat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: bisque;
+  /* so that scroll won't appear */
+  overflow: hidden;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 30px;
+  background-color: brown;
+  border-radius: 35px;
+  box-shadow: 2px 0px 12px 0 rgba(0, 0, 0, .5);
+  padding: 60px 60px 20px;
+  position: absolute;
+  transform: translate(-100vw);
+}
+
+.inactive{
+  backface-visibility: hidden;
+  animation: slideout 1s 0s;
+  transform: translateX(-100vw);
+}
+
+.active{
+  backface-visibility: hidden;
+  animation: slidein 1s 0s;
+  transform: translateX(0px);
+  z-index: 1;
+}
+
+@keyframes slidein {
+  0%{
+    transform: translateX(-100vw);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
+
+@keyframes slideout {
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(100vw);
+  }
+}
+
+.tip{
+  position: absolute;
+  top: 24px;
+  right: 45px;
+  font-size: .8rem;
+}
+
+.arrow{
+  width: 18px;
+  height: 2px;
+  background-color: wheat;
+  border-radius: 3px;
+  position: absolute;
+  right: 20px;
+  top: 30px;
+  cursor: pointer;
+}
+
+.arrow::after{
+  content: "";
+  width: 8px;
+  height: 8px;
+  border: 2px solid wheat;
+  border-color: wheat wheat transparent transparent;
+  border-radius: 3px;
+  position: absolute;
+  top: -5px;
+  right: 0px;
+  transform: rotate(45deg);
+}
+
+.title{
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+label{
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.input{
+  width: 200px;
+  border: none;
+  border-bottom: 2px solid wheat;;
+  background-color: transparent;
+  outline: none;
+  font-size: 1.2rem;
+  color: wheat;
+}
+
+.btn{
+  border: none;
+  padding: 12px 36px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 20px 10px;
+  text-transform: uppercase;
+  font-size: .8rem;
+  font-weight: 400;
+  color: white;
+  background-color: #011233;
+  box-shadow: 0px 0px 3px 0 rgba(0, 0, 0, .5);
+}
+
+.btn:hover{
+  letter-spacing: 1px;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container active" id="login">
+    <p class="tip">don't have an account?</p>
+    <div class="arrow"></div>
+    <h1 class="title">login</h1>
+    <form id="form">
+      <div class="username wrapper">
+        <label for="name">username</label>
+        <input type="text" name="name" id="name" class="input">
+      </div>
+      <div class="password wrapper">
+        <label for="password">password</label>
+        <input type="password" name="password" id="password" class="input">
+      </div>
+      <input class="btn" type="submit" value="log in">
+    </form>
+  </div>
+  <div class="container" id="signup">
+    <p class="tip">already have an account?</p>
+    <div class="arrow"></div>
+    <h1 class="title">signup</h1>
+    <form id="newform">
+      <div id="username" class="wrapper">
+        <label for="newname">username</label>
+        <input type="text" name="name" id="newname" class="input">
+      </div>
+      <div id="email" class="email wrapper">
+        <label for="newemail">email</label>
+        <input type="email" name="email" id="newemail" class="input">
+      </div>
+      <div id="password" class="wrapper">
+        <label for="newpassword">password</label>
+        <input type="password" name="password" id="newpassword" class="input">
+      </div>
+      <input class="btn" type="submit" value="sign up">
+    </form>
+  </div>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
